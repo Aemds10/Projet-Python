@@ -15,3 +15,13 @@ def facto_LU(A):
                     A1[i,j] = A1[i,j] - alpha * A1[k,j]  # a_ij => U
                  A1[i,k] = alpha  # => L  
     return A1
+
+# Matrice U
+U = np.triu(resA)
+print("Matrice U:")
+print(U)
+
+# Matrice L
+L = np.tril(resA,-1) + np.eye(resA.shape[0])
+print("Matrice L:")
+print(L)
